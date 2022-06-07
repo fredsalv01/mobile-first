@@ -45,23 +45,30 @@ header {
     padding: 15px;
     width: 229px;
     height: 48px;
-    background-color: $off-white;
+    background-color: $black;
     /*shadow*/
-    box-shadow: 0px 4px 8px 0 rgba($black, 0.3);
-    border: none;
+    box-shadow: 2px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    border: 1px thin $off-white;
     border-radius: 5px;
     font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
-    color: $black;
+    color: $just-white;
 
     span {
       display: inline-block;
       width: 13px;
       height: 8px;
       margin-left: 10px;
-      background-image: url('../assets/icons/down-arrow.svg');
+      // background-color: $just-white;
+      background:  url('../assets/icons/down-arrow.svg') no-repeat center;
+    
+      svg {
+        fill: $just-white;
+      }
     }
+
+
 
     &:hover {
       background-color: $bitcoin-orange;
