@@ -1,0 +1,59 @@
+.main-currency-table {
+  width: 70%;
+  min-width: 235px;
+  max-width: 500px;
+  height: 360px;
+  margin: 0 auto;
+  @include base-font($second-font);
+}
+
+.currency-table--title {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+  color: $bitcoin-orange;
+}
+
+.currency-table--container {
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 15px;
+
+  table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  td {
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: $grey;
+    background-color: $just-white;
+  }
+
+  .table__right {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+    color: #757575;
+  }
+
+  .trending-up {
+    @include trending-icons-features;
+    @include trending-icons("trending-up");
+  }
+  .trending-down {
+    @include trending-icons-features;
+    @include trending-icons("trending-down");
+  }
+
+}

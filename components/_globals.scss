@@ -1,0 +1,52 @@
+
+$bitcoin-orange: #F7931A;
+$soft-orange: #ffe9d5;
+$secondary-blue: #1A9AF7;
+$soft-blue: #E8F5FF;
+$warm-black: #201E1C;
+$black: #282623;
+$grey: #BABABA;
+$off-white: #faf8f7;
+$just-white: #fff;
+$base-font: 'DM Sans', sans-serif;
+$second-font: 'Inter', sans-serif;
+
+@mixin base-font ($font) {
+  font-family: $font;
+}
+
+@mixin trending-icons-features {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+}
+
+@mixin trending-icons($icon) {
+  @if($icon == "trending-down"){
+    background: url("../assets/icons/"+ $icon + ".svg") center/cover no-repeat;
+  }
+  @else {
+    background: url("../assets/icons/" + $icon + ".svg") center/cover no-repeat;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  @include base-font($base-font);
+  width: 100%;
+  max-width: 100vw;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  background-color: $off-white;
+}
+

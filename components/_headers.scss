@@ -1,0 +1,71 @@
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-width: 320px;
+  height: 334px;
+  text-align: center;
+  background: linear-gradient(207.8deg, #201E1C 16.69%,
+   #F7931A 100%);
+  img {
+    width: 150px;
+    height: 24px;
+    align-self: center;
+  }
+}
+
+.header--title-container {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  margin-top: 40px;
+  text-align: center;
+  align-self: center;
+  h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: $just-white;
+  }
+  p {
+    margin-top: 25px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: $soft-orange;
+  }
+  &--button {
+    position: absolute;
+    top: 270px;
+    left:calc(50% - 118px);
+    display: block;
+    margin-top: 35px;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    background-color: $off-white;
+    /*shadow*/
+    box-shadow: 0px 4px 8px 0 rgba($black, 0.3);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: $black;
+
+    span {
+      display: inline-block;
+      width: 13px;
+      height: 8px;
+      margin-left: 10px;
+      background-image: url('../assets/icons/down-arrow.svg');
+    }
+
+    &:hover {
+      background-color: $bitcoin-orange;
+      color: $just-white;
+    }
+  }
+}
