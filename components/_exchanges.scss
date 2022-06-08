@@ -1,12 +1,13 @@
 .main-exchange__container{ 
   width: 100%;
+  min-width: 320px;
   height: auto;
   padding-top: 80px;
   padding-bottom: 30px;
   text-align: center;
   &--title{ 
     width: 80%;
-    min-width: 288px;
+    min-width: 320px;
     max-width: 900px;
     margin: 0 auto;
     h2 {
