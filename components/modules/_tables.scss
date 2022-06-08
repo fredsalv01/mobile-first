@@ -4,11 +4,12 @@
   min-width: 230px;
   max-width: 500px;
   height: 340px;
-  margin: 0 auto 50px auto;
+  margin: 15px auto;
   padding: 15px 5px 0 0;
   border-radius: 20px;
   @include base-font($second-font);
   box-shadow: 2px 5px 10px 4px rgba(0, 0, 0, 0.5);
+
 }
 
 .currency-table--title {

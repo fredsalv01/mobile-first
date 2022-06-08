@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Batatabit</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </head>
 <body>
   <header>
@@ -26,8 +29,8 @@
         <h2>Visibilizamos todas las tasas de cambio.</h2>
         <p>Traemos información en tiempo real de las casas de cambio y las monedas más importantes del mundo.</p>
       </div>
-      <section class="main-tables__container">
-        <div class="main-currency-table">
+      <section class="main-tables__container owl-carousel owl-theme"">
+        <div class="main-currency-table item">
           <p class="currency-table--title">Monedas</p>
           <div class="currency-table--date">
             <p><strong>actualizado:</strong> 19 Julio 23:45</p>
@@ -53,7 +56,7 @@
             </table>
           </div>
         </div>
-        <div class="main-fees-table">
+        <div class="main-fees-table item">
           <p class="fees-table--title">Comisiones</p>
           <div class="fees-table--date">
             <p><strong>actualizado:</strong> 19 Julio 23:45</p>
@@ -102,5 +105,29 @@
     <section></section>
   </main>
   <footer></footer>
+  <script>
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+        center: true,
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: false,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1,
+            loop: false,
+          },
+          1000: {
+            items: 1,
+            loop: false,
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
