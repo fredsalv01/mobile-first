@@ -44,19 +44,61 @@
   width: 90%;
   min-width: 288px;
   max-width: 400px;
-  height: 150px;
-  margin: 15px auto;
+  min-height: 150px;
+  margin: 30px auto;
   padding: 15px;
   background-color: $just-white;
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 16, 0, 0.5);
 
   .clock {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-bottom: 10px;
-    background: url('../assets/icons/clock.svg') no-repeat/cover center;
+    display: block;
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+    @include svg-icons("clock");
+  }
+  .eye {
+    display: block;
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+    @include svg-icons("eye");
+  }
+  .dollar {
+    display: block;
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+    @include svg-icons("dollar-sign");
+  }
+  .check {
+    display: block;
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+    @include svg-icons("check-circle");
+  }
+
+  .product--card-title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.8rem;
+    text-align: center;
+    color: $warm-black;
+  }
+
+  .product--card-body {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+    text-align: justify;
   }
 
 }

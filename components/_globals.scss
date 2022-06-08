@@ -22,13 +22,8 @@ $second-font: 'Inter', sans-serif;
   margin-left: 10px;
 }
 
-@mixin trending-icons($icon) {
-  @if($icon == "trending-down"){
-    background: url("../assets/icons/"+ $icon + ".svg") center/cover no-repeat;
-  }
-  @else {
-    background: url("../assets/icons/" + $icon + ".svg") center/cover no-repeat;
-  }
+@mixin svg-icons($icon) {
+  background: url("../assets/icons/"+ $icon + ".svg") center/cover no-repeat;
 }
 
 * {
@@ -42,6 +37,7 @@ html {
   @include base-font($base-font);
   width: 100%;
   max-width: 100vw;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -58,7 +54,7 @@ main {
   display: flex;
   justify-content: center;
   gap: 50px;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .disabled{

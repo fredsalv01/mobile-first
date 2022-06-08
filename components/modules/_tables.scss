@@ -87,11 +87,11 @@
 
   .trending-up {
     @include trending-icons-features;
-    @include trending-icons("trending-up");
+    @include svg-icons("trending-up");
   }
   .trending-down {
     @include trending-icons-features;
-    @include trending-icons("trending-down");
+    @include svg-icons("trending-down");
   }
 
 }
