@@ -1,0 +1,127 @@
+.plans-container--slider{
+  width: 100%;
+  min-width: 320px;
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: $off-white;
+  margin: auto;
+  
+  .plans-container--wrapper {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    max-width: 450px;
+    margin: 0 auto;  
+    height: calc(100% + 30px);
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: $warm-black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    margin-left: 50px;
+  }
+
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  
+  // .plans-container--card {
+  //   display: none;
+  // }
+
+  .plans-container--card {
+    width: 65%;
+    position: relative;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px auto 0;
+    padding: 0 15px;
+    background-color: $just-white;
+    border-radius: 15px;
+    box-shadow: 2px 5px 10px 4px rgba(0, 0, 0, 0.2);
+    vertical-align: middle;
+
+
+    //estilos internos de la tarjeta de precios
+    .recommended {
+      position: absolute;
+      width: 120px;
+      top: -20px;
+      left: calc(50% - 60px);
+      font-size: 1.2rem;
+      font-weight: 500;
+      background-color: $bitcoin-orange;
+      border-radius: 8px;
+      color: $just-white;
+      padding: 10px;
+    }
+    .plan-card--title {
+      padding-top: 30px;
+      font-size: 1.5rem;
+      font-weight: 500px;
+      line-height: 1.8rem;
+      color: $black;
+    }
+    
+    .plan-card--price {
+      padding: 5px 0;
+      font-size: 5.2rem;
+      font-weight: bold;
+      line-height: 5.3rem;
+      color: black;
+    
+      span {
+        font-size: 1.2rem;
+        font-weight: 300;
+        vertical-align: 25px;
+        margin-right: 5px;
+      }
+    }
+
+    .plan-card--saving {
+      font-size: 1.2rem;
+      color: #757575;
+    }
+
+    .plan-card--ca{
+      width: 150px;
+      height: 48px;
+      margin-top: 20px;
+      background-color: $off-white;
+      border: 2px solid $bitcoin-orange;
+      border-radius: 4px;
+      font-family: $base-font;
+      font-size: 1.4rem;
+      font-weight: bold;
+      line-height: 1.8rem;
+      color: $black;
+
+      span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        @include svg-icons("orange-right-arrow");
+        vertical-align: text-bottom;
+      }
+    }
+  }
+    
+}

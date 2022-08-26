@@ -40,6 +40,23 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width:11px;
+}
+
+::-webkit-scrollbar-track {
+  background: $warm-black;
+  box-shadow: inset 2px 5px 10px 4px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #757575;
+}
+
+
+
+
 main {
   width: 100%;
   min-width: 320px;

@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Batatabit</title>
   <link rel="stylesheet" href="css/styles.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.6/dist/js/splide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script></script>
 </head>
 <body>
   <header>
@@ -17,7 +17,7 @@
     <div class="header--title-container">
       <h1>La próxima revolución en el intercambio de criptomonedas.</h1>
       <p>Batatabit te ayuda a navegar entre los diferentes precios y tendencias.</p>
-      <a href="#" class="header--title-container--button">
+      <a href="#planes" class="header--title-container--button">
         Conoce Nuestros Planes
         <span></span>
       </a>
@@ -126,10 +126,48 @@
     <section class="bitcoin-img-container">
       <h2 class="letters">Conócelo hoy</h2>
     </section>
-    <section></section>
+    <section id="planes" class="main-plans-container">
+      <div class="plans--title">
+        <h2>Escoge el plan que mejor se ajuste a ti.</h2>
+        <p>Cualquier plan te da acceso completo a nuestra plataforma.</p>
+      </div>
+      <section class="plans-container--slider">
+        <div class="plans-container--wrapper">
+          <article class="plans-container--card">
+            <p class="recommended">Recomendado</p>
+            <div class="plan-info-container">
+              <h3 class="plan-card--title">Pago Mensual</h3>
+              <p class="plan-card--price"><span>$</span>14</p>
+              <p class="plan-card--saving">* Ahorras $9 comparado al plan anual</p>
+              <button class="plan-card--ca">Escoger este <span></span> </button>
+            </div>
+          </article>
+          <article class="plans-container--card">
+            <p class="recommended">Recomendado</p>
+            <div class="plan-info-container">
+              <h3 class="plan-card--title">Pago Trimestral</h3>
+              <p class="plan-card--price"><span>$</span>60</p>
+              <p class="plan-card--saving">* Ahorras $50 comparado al plan mensual</p>
+              <button class="plan-card--ca">Escoger este <span></span> </button>
+            </div>
+          </article>
+          <article class="plans-container--card">
+            <p class="recommended">Recomendado</p>
+            <div class="plan-info-container">
+              <h3 class="plan-card--title">Pago Anual</h3>
+              <p class="plan-card--price"><span>$</span>99</p>
+              <p class="plan-card--saving">* Ahorras $129 comparado al plan trimestral</p>
+              <button class="plan-card--ca">Escoger este <span></span> </button>
+            </div>
+          </article>
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+      </section>
+    </section>
   </main>
   <footer></footer>
-  <!-- <script>
+  <script>
     $(document).ready(function(){
       $(".owl-carousel").owlCarousel({
         center: true,
@@ -152,6 +190,29 @@
         }
       });
     });
-  </script> -->
+  </script>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("plans-container--card");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+  </script>
 </body>
 </html>
